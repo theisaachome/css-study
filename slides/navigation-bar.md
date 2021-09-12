@@ -5,7 +5,6 @@
 
 ### Vertical Navigation Bar
 
-
 ```css
 ul {
   list-style-type: none;
