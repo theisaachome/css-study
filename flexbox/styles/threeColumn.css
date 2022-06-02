@@ -1,0 +1,54 @@
+
+ /* three Columns demo with flexbox */
+
+ .columns {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     gap: 2rem;
+     /* width: 800px; */
+     border: 2px solid firebrick;
+}
+@media (min-width:750px){
+    .columns{
+        flex-direction: row;
+    }
+}
+.columns > *{
+    /*  shrink to the longest single line */
+     /* flex-shrink: 0; */
+    /* default value of shrink is 1 which grow */
+    /* flex-shrink: 1; */
+    /* flex:1 will make equal width */
+    /* flex: 1; */
+    /* 
+        flex:1 behind the scence it setup
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0; 
+
+    */
+    flex-basis: 100%;
+   
+}
+.card {
+ padding: 1rem;
+ background: hsl(var(--clr-green));
+}
+
+.tags {
+ display: flex;
+ gap: 1em;
+ list-style: none;
+ font-size: 0.725rem;
+}
+
+.tag {
+ background: hsl(0 0% 100% / 0.4);
+ padding: 0.25rem 0.5rem;
+}
+
+.card:nth-of-type(2){
+    background-color: pink;
+    align-self: flex-start;
+}
