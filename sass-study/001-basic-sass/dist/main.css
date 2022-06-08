@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #272727;
+  font-weight: 400;
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-inline: auto;
+  width: 80%;
+}
+.main p {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+.main .main__description, .main .main__description--overview {
+  font-weight: 400;
+}
+.main .main__description:hover, .main .main__description--overview:hover {
+  color: palevioletred;
+}
+.main .main__description--overview:hover {
+  color: #ff652f;
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

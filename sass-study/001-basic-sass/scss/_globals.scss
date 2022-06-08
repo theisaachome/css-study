@@ -1,0 +1,36 @@
+body{
+    background: $primary-color;
+    font-weight: map-get($font-weights , regular );
+    color: $text-color;
+}
+
+.main{
+    @include flexCenter(row);
+    margin-inline: auto;
+    width: 80%;
+    p{
+        margin-bottom: 2rem;
+        font-weight:weight( medium );
+        text-align: center;
+    }
+    #{&}__description{
+        font-weight: weight(regular);
+        &:hover{
+            color: palevioletred;
+        }
+    }
+    #{&}__description--overview{
+        @extend .main__description;
+        &:hover{
+            color:$accent-color;
+        }
+    }
+    
+    @include mobile{
+        flex-direction: column
+    }
+}
+
+.light{
+    @include theme(false);
+}
